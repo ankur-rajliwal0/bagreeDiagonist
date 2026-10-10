@@ -4,6 +4,8 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import { WaveDivider, SlantedDivider } from '../components/Shapes';
+import AboutCenter from '../components/AboutCenter';
+import ImageSlider from '../components/ImageSlider';
 
 export default function Home() {
   return (
@@ -110,6 +112,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <AboutCenter />
+      <ImageSlider />
 
       <WhyChooseUs />
       

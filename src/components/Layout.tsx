@@ -1,6 +1,7 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Activity, Menu, X, ArrowRight } from 'lucide-react';
+import logo from '../assets/images/image.png';
 
 export default function Layout() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,9 +29,7 @@ export default function Layout() {
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-3' : 'bg-white/90 backdrop-blur-sm py-5'}`}>
         <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <div className="bg-gradient-to-tr from-primary to-secondary p-2 rounded-xl text-white">
-              <Activity className="w-6 h-6" />
-            </div>
+            <img src={logo} alt="Bagree Diagnostic Logo" className="h-10 md:h-12 w-auto object-contain" />
             <div>
               <h1 className="font-bold text-xl md:text-2xl text-slate-900 tracking-tight">Bagree Diagnostic</h1>
               <p className="text-xs text-primary font-medium uppercase tracking-wider">& CT Scan Center</p>
@@ -85,7 +84,7 @@ export default function Layout() {
       <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
-            <Activity className="w-6 h-6 text-primary" />
+            <img src={logo} alt="Bagree Diagnostic Logo" className="h-8 w-auto object-contain" />
             <span className="font-bold text-white text-xl">Bagree Diagnostic</span>
           </div>
           <p>© {new Date().getFullYear()} Bagree Diagnostic & CT Scan Center. All rights reserved.</p>
